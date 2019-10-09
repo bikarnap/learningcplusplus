@@ -1,7 +1,1 @@
-
-./WeeklyExercises/week*/Exercise*/.vs/*
-./WeeklyExercises/week*/Exercise*/Debug
-./WeeklyExercises/week*/Exercise*/*.sln
-./WeeklyExercises/week*/Exercise*/*.vcxproj
-./WeeklyExercises/week*/Exercise*/*.vcxproj.filters
-./WeeklyExercises/week*/Exercise*/*.vcxproj.user
+*.slo
