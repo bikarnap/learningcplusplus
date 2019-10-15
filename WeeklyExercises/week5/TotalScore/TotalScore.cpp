@@ -8,11 +8,13 @@ using namespace std;
 
 int main() {
 	double jumpLength = 0.0, points = 0.0, totalPoints=0.0, totalScore=0.0;
-	int judegeNumber = 5;
-	int judgeCount = 1;
+	int judgeNumber = 5; // total number of judges
+	int judgeCount = 1;  // to keep track of the number of judges
+
 	cout << "Length of the jump: ";
 	cin >> jumpLength;
-	while (judgeCount <= judegeNumber) {
+
+	while (judgeCount <= judgeNumber) {
 		cout << "Points judge " << judgeCount << ": "; 
 		cin >> points; 
 		totalPoints += points;
