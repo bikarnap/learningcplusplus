@@ -1,7 +1,8 @@
-// While loop: program asks input from the user until the user inputs 0. When the user input is 0, the program sums all the inputs and prints on the screen
+// While loop: program asks input from the user until the user inputs 0. 
+// When the user input is 0, the program sums all the inputs and prints on the screen
 
 #include <iostream>
-using namespace std; 
+using namespace std;
 
 int main() {
 	int inputNumber, sum = 0;
