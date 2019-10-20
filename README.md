@@ -1,5 +1,5 @@
 # C++
-This repository consists of the exercises done to learn C++ programming.
+This repository consists of the exercises done to learn C++ programming. Additionally, it also has a final assignment, where all the concepts practised are applied to make a larger program.
 
 - The exercises are divided into weekly exercises 
 - Each week, different concepts of computer programming are practised
