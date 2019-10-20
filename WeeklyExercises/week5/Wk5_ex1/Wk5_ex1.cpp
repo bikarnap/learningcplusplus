@@ -6,25 +6,25 @@ using namespace std;
 int main() {
 	int counter = 5;
 	int evenCheck = 1; // to check if the number is even
-	int evenNumbers = 0; // keep track of how many numbers are even
 
 	// (a) Prints 5 4 3 2 1 0 -1 -2 -3 -4 -5
+	cout << "Output from the first loop\n";
 	while (counter > -6) {
 		cout << counter << " ";
 		counter--;
 	}
-
+	cout << "\n\n";
+	cout << "Is there a problem?";
 	// (b) printing even numbers between 1 and 50
+	cout << "Output from the second loop";
 	cout << "\nThe even numbers (1-50) are: ";
 	while (evenCheck <= 50) {
 		if (evenCheck % 2 == 0) {
 			cout << evenCheck << " ";
-			evenNumbers++; 
 		}
 		evenCheck++;
 	}
 	cout << "\n";
-	cout << "\nThe total number of even numbers in the range of 1-50 inclusive is " << evenNumbers << "\n";
 
 	return 0;
 }
