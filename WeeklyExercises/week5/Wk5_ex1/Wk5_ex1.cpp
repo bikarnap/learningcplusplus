@@ -14,7 +14,6 @@ int main() {
 		counter--;
 	}
 	cout << "\n\n";
-	cout << "Is there a problem?";
 	// (b) printing even numbers between 1 and 50
 	cout << "Output from the second loop";
 	cout << "\nThe even numbers (1-50) are: ";
