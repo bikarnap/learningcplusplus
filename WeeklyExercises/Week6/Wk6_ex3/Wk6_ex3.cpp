@@ -29,8 +29,9 @@ int main() {
 	cin >> name1 >> name2;
 	name1Count = name1.size();
 	name2Count = name2.size();
-	if(name1.compare(name2) == -1) cout <<"Alphabetically " <<name1 << " comes first\n";
-	else cout << "Alphabetically " << name2 << " comes first\n";
+	if(name1.compare(name2) == -1) cout <<"Alphabetically " <<name1 << " comes first";
+	else cout << "Alphabetically " << name2 << " comes first";
+	cout << "\n";
 
 	// Test using ternary operator
 	name1Count > name2Count
