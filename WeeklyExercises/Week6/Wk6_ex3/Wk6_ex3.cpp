@@ -33,12 +33,21 @@ int main() {
 	else cout << "Alphabetically " << name2 << " comes first";
 	cout << "\n";
 
-	// Test using ternary operator
-	name1Count > name2Count
-		? cout << name1 << " has more characters than " << name2
-		: cout << name2 << " has more characters than " << name1;
+	if (name1Count > name2Count) {
+		cout << name1 << " has more characters (characters = " << name1Count << ") than " << name2 
+			 << " (characters = " << name2Count <<").";
+	}
+	else if (name2Count < name2Count) {
+		cout << name2 << " has more characters (characters = " << name2Count << " ) than " << name1
+			<< " (characters = " << name1Count << ").";;
+
+	} else 
+		cout << name1 <<" (characters = " <<name1Count << ") has same number of characters as " << name2 <<" (characters = "
+				<<name2Count <<")." ;
+
 
 	cout << "\n";
+
 
 	return EXIT_SUCCESS;
 
