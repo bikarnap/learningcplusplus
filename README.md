@@ -14,4 +14,6 @@ This repository consists of the exercises done to learn C++ programming. Additio
 * Decision making continued + while loop
 ## Week 5
 * More while loops + do-while loop 
+## Week 6
+* for-loop, use of math library, use of strings
 
