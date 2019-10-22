@@ -39,5 +39,22 @@ int main() {
 		break;
 	}
 
+	// Calculation of the value of PI
+	double pi = 0.00; // initialiation of the value of PI
+	int userInput; 
+	cout << "Enter the number of terms to be included to calculate the value of PI: ";
+	cin >> userInput;
+	double denominator = 1.00;
+	for (int i = 1; i <= userInput; i++) {
+		if (i % 2 != 0)
+			pi += (4.0 / denominator);
+		else
+			pi -= (4.0 / denominator);
+		denominator += 2;
+		
+	}
+
+	cout << "The value of PI is: " << static_cast<double>(round(pi));
+	cout << "\n";
 	return EXIT_SUCCESS;
 }
