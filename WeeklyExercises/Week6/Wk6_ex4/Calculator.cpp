@@ -44,7 +44,7 @@ int main() {
 	// Calculation of the value of PI
 	double pi = 0.00; // initialiation of the value of PI
 	int userInput; 
-	cout << "\nApproximation of the the value of pi:\n";
+	cout << "\nApproximation of the the value of PI:\n";
 	cout << "Enter the number of terms to be included to calculate the value of PI: ";
 	cin >> userInput;
 	double denominator = 1.00;
