@@ -54,7 +54,7 @@ int main() {
 		
 	}
 
-	cout << "The value of PI is: " << static_cast<double>(round(pi));
+	cout << "The value of PI is: " << pi;
 	cout << "\n";
 	return EXIT_SUCCESS;
 }
