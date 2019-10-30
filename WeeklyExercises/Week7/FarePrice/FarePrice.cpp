@@ -15,5 +15,8 @@ int main() {
 }
 
 float FarePrice(float distanceTravelled, float fuelConsumption, float fuelPrice) {
+	const float BASE_FARE = 9.50;
+	float priceToPay = BASE_FARE + (distanceTravelled * fuelConsumption * fuelPrice);
+	return priceToPay; 
 
 }
