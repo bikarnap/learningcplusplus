@@ -1,4 +1,4 @@
-//
+// Calculation of drop velocity
 
 #include <iostream>
 using namespace std; 
@@ -13,7 +13,7 @@ int main() {
 	cout << "Time\t" << "Speed (km/h)\n";
 	for (int i = 0; i <= numOfSeconds; i++) {
 		int t = i; // t is the time
-		dropVelocity = 0.5 * g * t * t; // result in m/s
+		dropVelocity = g * t; // result in m/s
 		dropVelocity = dropVelocity * 3.6; // velocity converted to km/h
 		cout << t << "\t" << dropVelocity << "\n";
 	}

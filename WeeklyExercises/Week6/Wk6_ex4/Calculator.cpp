@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 	int calculation; 
-	int number;
+	double number;
 	cout << "Please choose calculation (1=sqare root, 2=logarithm, 3=exp, 4=tan, 5=end program): ";
 	cin >> calculation; 
 	if (calculation > 0 && calculation < 5) {
@@ -19,7 +19,7 @@ int main() {
 			break;
 
 		case 2:
-			cout << "Log of " << number << ": " << log(number);
+			cout << "Log of " << number << ": " << log10(number);
 			break;
 
 		case 3:
@@ -29,7 +29,6 @@ int main() {
 		case 4:
 			cout << "Tan of " << number << ": " << tan(number);
 			break;
-
 		default:
 			break;
 		}

@@ -1,4 +1,4 @@
-//
+// Working with strings
 
 #include <iostream>
 using namespace std; 
@@ -37,7 +37,7 @@ int main() {
 		cout << name1 << " has more characters (characters = " << name1Count << ") than " << name2 
 			 << " (characters = " << name2Count <<").";
 	}
-	else if (name2Count < name2Count) {
+	else if (name2Count < name1Count) {
 		cout << name2 << " has more characters (characters = " << name2Count << " ) than " << name1
 			<< " (characters = " << name1Count << ").";;
 
@@ -50,5 +50,4 @@ int main() {
 
 
 	return EXIT_SUCCESS;
-
 }
