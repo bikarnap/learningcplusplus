@@ -1,4 +1,4 @@
-// While loop: program asks input from the user until the user inputs 0. 
+// While loop (do-while): program asks input from the user until the user inputs 0. 
 // When the user input is 0, the program sums all the inputs and prints on the screen
 
 #include <iostream>
