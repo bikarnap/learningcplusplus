@@ -16,4 +16,9 @@ This repository consists of the exercises done to learn C++ programming. Additio
 * More while loops + do-while loop 
 ## Week 6
 * for-loop, use of math library, use of strings
-
+## Week 7
+*
+## Week 8
+*
+## Week 9
+* Function by reference, function returning boolean (finding prime numbers), arrays, and switch-case
