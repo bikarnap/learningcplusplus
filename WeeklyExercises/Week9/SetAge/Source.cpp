@@ -7,12 +7,12 @@ void setAge(string, int &);
 
 int main() {
 	int age = 34;
-	cout << "Age before: " << age;
+	cout << "Age before: " << age; // age = 34
 	cout << endl;
 
-	setAge("Bikarna", age);
+	setAge("Bikarna", age); // passing age to setAge function
 
-	cout << "Age after: " << age;
+	cout << "Age after: " << age; // age = age passed to function setAge
 	cout << endl; 
 
 }

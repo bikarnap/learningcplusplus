@@ -1,17 +1,23 @@
+// Testing if the given number is prime or not. 
+// Prime numbers are the numbers which are divisible by 1 and itself
 
 #include <iostream>
 using namespace std; 
 
-bool testPrime(int);
+bool testPrime(int); // function prototype for testing if the nubmer is prime
 
 int main() {
 	int count = 0;
 	cout << "The prime numbers between 0 and 1000 are \n";
 	for (int i = 1; i < 1000; i++) {
 		if (testPrime(i)) {
-			cout << i << " ";
+			cout << i << " Prime number";
 			count += 1;
 		}
+		else {
+			cout << i << " Not prime number";
+		}
+		cout << endl; 
 	}
 	cout << endl;
 	cout << "Total number of primes: " << count; 

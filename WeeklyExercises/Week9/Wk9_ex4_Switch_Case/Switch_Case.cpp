@@ -34,7 +34,7 @@ int main() {
 		calculation = 0;
 		break;
 	}
-
+	
 	cout << "The calculation of selected operation is: " << calculation;
 
 	return EXIT_SUCCESS;

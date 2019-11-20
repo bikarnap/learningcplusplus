@@ -1,9 +1,10 @@
+// Working with integer arrays
 
 #include <iostream>
 using namespace std; 
 
 int main() {
-	int examScores[10]; 
+	int examScores[10]; // array declaration containing 10 elements
 	int totalScores = 0; 
 	double averageScore; 
 	int sizeOfScore = sizeof(examScores) / sizeof(int);

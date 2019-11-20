@@ -1,8 +1,10 @@
+// Array and histogram
 
 #include <iostream>
 using namespace std; 
 
-void printStar(int);
+void printStar(int); // function prototype
+
 int main() {
 	const int MONTHS = 12; 
 	int monthlyRain[MONTHS];
