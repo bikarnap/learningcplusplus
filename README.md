@@ -22,3 +22,5 @@ This repository consists of the exercises done to learn C++ programming. Additio
 *
 ## Week 9
 * Function by reference, function returning boolean (finding prime numbers), arrays, and switch-case
+## Week 10
+* Random numbers, Lottery numbers, Dice, etc
