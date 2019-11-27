@@ -3,21 +3,23 @@
 #include<time.h>
 using namespace std; 
 
-void LotteryNumbers(int *, int);
+void LotteryNumbers(int *, int, int, int); // function prototype
 
 int main() {
-	int myArray[5]; 
-	LotteryNumbers(myArray, 5);
-	for (int el : myArray)
-		cout << el << " ";
+	const int SIZE = 7;
+	int lotteryNumbers[SIZE];
+	LotteryNumbers(lotteryNumbers, SIZE, 39, 1);
+	for (int lottery : lotteryNumbers)
+		cout << lottery << " ";
+
  	return EXIT_SUCCESS;
 }
 
-void LotteryNumbers(int *numbers, int size) {
+void LotteryNumbers(int *numbers, int size, int max, int min) { // function definition
 	int randomNumber; 
 	srand(time(0));
 	for (int i = 0; i < size; i++) {
-		randomNumber = rand() % 39 + 1; 
+		randomNumber = rand() % max + min; 
 		numbers[i] = randomNumber;
 	}
 

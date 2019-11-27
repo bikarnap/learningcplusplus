@@ -1,4 +1,7 @@
 /*
+***Dice simulation program***
+Program that asks number of faces of a dice and the number of times the dice is rolled.
+Then it prints all the results of rolling
 */
 
 #include <iostream>
