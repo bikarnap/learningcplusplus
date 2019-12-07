@@ -1,16 +1,18 @@
 #include <iostream>
 using namespace std; 
 
+struct Student {
+	string firstName;
+	string lastName;
+	string studentNumber;
+	int credits;
+};
 
 int main() {
 
-	struct Student {
-		string firstName;
-		string lastName;
-		string studentNumber;
-		int credits;
-	}student1;
+	Student student1; 
 
+	// input operation for student1 data
 	cout << "Enter the first name for student1: ";
 	cin >> student1.firstName;
 	cout << "Enter the last name of student1: ";
@@ -19,11 +21,13 @@ int main() {
 	cin >> student1.studentNumber;
 	cout << "Enter the number of credits completed by student1: ";
 	cin >> student1.credits;
+	
 
-	cout << "First name: " << student1.firstName << "\n"
+	// Displaying student1 data
+	cout << "\nFirst name: " << student1.firstName << "\n"
 		<< "Last name: " << student1.lastName << "\n"
 		<< "Student number: " << student1.studentNumber << "\n"
-		<< "Credits: " << student1.credits << "\n";
+		<< "Credits: " << student1.credits << " op\n";
 
 	return EXIT_SUCCESS;
 }
