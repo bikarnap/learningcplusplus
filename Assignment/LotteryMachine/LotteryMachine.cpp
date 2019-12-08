@@ -3,72 +3,54 @@
 #include <iostream>
 #include <algorithm>
 #include <time.h>
-//#include "Header.h"
+#include "Header.h"
 using namespace std; 
 
-// Function prototypes
-int* generateArray(int, int, int);
-int* combineArray(int*, int*, int, int);
-//bool Exists(int);
-
-
 int main() {
-	cout << "Lottery machine\n";
-	cout << "=================\n";
+	int input = 0;
+	int const MAX = 39;
+	int const MIN = 1;
+	int const LOTTERY_SIZE = 7;
+	int const BONUS_SIZE = 3;
+	DisplayWelcome();
+	DisplayMenu();
 	srand(time(0));
-	int input = 0; 
 	while (input != 1) {
-		int* lotteryNumbers = generateArray(7, 1, 39);
-		cout << "\n";
-		int* bonusNumbers = generateArray(3, 1, 39);
-		int* combinedNumbers = combineArray(lotteryNumbers, bonusNumbers, 7, 3);
-		cout << "Exit?" << endl; 
+		int* lotteryNumbers = generateArray(LOTTERY_SIZE, MIN, MAX);
+		int* bonusNumbers = generateArray(BONUS_SIZE, MIN, MAX);
+		sort(lotteryNumbers, lotteryNumbers + LOTTERY_SIZE);
+		sort(bonusNumbers, bonusNumbers + BONUS_SIZE);
+		int* combinedNumbers = combineArray(lotteryNumbers, bonusNumbers, LOTTERY_SIZE, BONUS_SIZE);
+		for (int i = 0; i < (LOTTERY_SIZE + BONUS_SIZE); i++) {
+			cout << combinedNumbers[i] << " ";
+		}
+		cout << "\nExit?" << endl; 
 		cin >> input; 
 	}
-	
-	
-		
-	return 0; 
+	return EXIT_SUCCESS;
 }
 
-int* generateArray(int arraySize, int min, int max) {
-	int* generatedArray = new int[arraySize];
-	generatedArray[0] = rand() % max + min;
-	bool isDuplicate = false;
-	int element; 
-	for (int i = 0; i < arraySize; i++) {
-		element = rand() % max + min;
-		for(int j = 0; j < i+1; j++) {
-			if (element == generatedArray[j]) {
-				isDuplicate = true;
-			}
-		}
-		if (isDuplicate) {
-			i -= 1;
-			isDuplicate = false;
-		}
-		else {
-			generatedArray[i] = element; 
-			cout << element << " "; 
-		}
-
+int SelectOption(int size) {
+	int selection; 
+	cin >> selection; 
+	switch (selection) {
+	case 0: 
+		exit(0);
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		break;
+	case 4:
+		break;
+	default:
+		break;
 	}
-		
-	return generatedArray; 
+	
 }
 
-int* combineArray(int* array1, int * array2, int size1, int size2) {
-	int array1Size = size1;
-	int array2Size = size2;
-	int* combinedArray;
-	combinedArray = new int[array1Size + array2Size] ;
-	cout << "\n";
-	for (int i = 0; i < (array1Size + array2Size); i++) {
-		if (i < array1Size)
-			combinedArray[i] = array1[i];
-		else
-			combinedArray[i] = array2[i - array1Size];
-		cout << combinedArray[i] << " ";
-	}
-	return combinedArray;
-}
+
+
+
