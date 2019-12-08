@@ -22,9 +22,7 @@ int* generateArray(int arraySize, int min, int max) {
 			generatedArray[i] = element;
 			//cout << element << " "; 
 		}
-
 	}
-
 	return generatedArray;
 }
 
@@ -62,7 +60,26 @@ void DisplayMenu() {
 		<< "3 - Enter the bonus numbers yourself\n"
 		<< "4 - Automatically generate bonus numbers\n"
 		<< "0 - Exit the game\n";
-
-	
 }
+
+int SelectOption(int size) {
+	int selection;
+	cin >> selection;
+	switch (selection) {
+	case 0:
+		exit(0);
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		break;
+	case 4:
+		break;
+	default:
+		break;
+	}
+}
+
 
