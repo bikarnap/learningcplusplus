@@ -3,6 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <time.h>
+//#include "Header.h"
 using namespace std; 
 
 // Function prototypes
@@ -15,40 +16,44 @@ int main() {
 	cout << "Lottery machine\n";
 	cout << "=================\n";
 	srand(time(0));
-	int* lotteryNumbers = generateArray(7, 1, 39);
-	cout << "\n";
-	int* bonusNumbers = generateArray(3, 1, 39);
-	int* combinedNumbers = combineArray(lotteryNumbers, bonusNumbers, 7, 3);
-
+	int input = 0; 
+	while (input != 1) {
+		int* lotteryNumbers = generateArray(7, 1, 39);
+		cout << "\n";
+		int* bonusNumbers = generateArray(3, 1, 39);
+		int* combinedNumbers = combineArray(lotteryNumbers, bonusNumbers, 7, 3);
+		cout << "Exit?" << endl; 
+		cin >> input; 
+	}
+	
+	
+		
 	return 0; 
 }
 
 int* generateArray(int arraySize, int min, int max) {
-	int* generatedArray; 
-	generatedArray = new int[arraySize];
-	
+	int* generatedArray = new int[arraySize];
+	generatedArray[0] = rand() % max + min;
+	bool isDuplicate = false;
+	int element; 
 	for (int i = 0; i < arraySize; i++) {
-		int element = rand() % max + min; 
-		bool isDuplicate = false;
-		for (int j = 0; j < i+1; j++) {
-			if (j > 1) {
-				if (generatedArray[j] == element) {
-					isDuplicate = true;
-					break;
-				}
-					
-				else
-					isDuplicate = false;
+		element = rand() % max + min;
+		for(int j = 0; j < i+1; j++) {
+			if (element == generatedArray[j]) {
+				isDuplicate = true;
 			}
-			
+		}
+		if (isDuplicate) {
+			i -= 1;
+			isDuplicate = false;
+		}
+		else {
+			generatedArray[i] = element; 
+			cout << element << " "; 
 		}
 
-		if (isDuplicate)
-			i -= 1;
-		else 
-			generatedArray[i] = element; 
-		cout << element <<" "; 
 	}
+		
 	return generatedArray; 
 }
 
@@ -67,11 +72,3 @@ int* combineArray(int* array1, int * array2, int size1, int size2) {
 	}
 	return combinedArray;
 }
-
-/*bool Exists(int arrayToCheck, int element) {
-
-	if (number)
-		return true;
-	else
-		return false;
-}*/
