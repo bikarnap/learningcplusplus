@@ -8,13 +8,15 @@ using namespace std;
 
 int main() {
 	int input = 0;
-	int const MAX = 39;
-	int const MIN = 1;
-	int const LOTTERY_SIZE = 7;
-	int const BONUS_SIZE = 3;
+	int const MAX = 39; // maximum value of lottery number
+	int const MIN = 1; // minimum value of lottery number
+	int const LOTTERY_SIZE = 7; // # of lottery numbers
+	int const BONUS_SIZE = 3; // # of bonus numbers
+
 	DisplayWelcome();
 	DisplayMenu();
-	srand(time(0));
+
+	srand(time(0)); // refreshing seeds for random generation
 	while (input != 1) {
 		int* lotteryNumbers = generateArray(LOTTERY_SIZE, MIN, MAX);
 		int* bonusNumbers = generateArray(BONUS_SIZE, MIN, MAX);
