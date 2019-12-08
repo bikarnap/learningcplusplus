@@ -32,26 +32,6 @@ int main() {
 	return EXIT_SUCCESS;
 }
 
-int SelectOption(int size) {
-	int selection; 
-	cin >> selection; 
-	switch (selection) {
-	case 0: 
-		exit(0);
-		break;
-	case 1:
-		break;
-	case 2:
-		break;
-	case 3:
-		break;
-	case 4:
-		break;
-	default:
-		break;
-	}
-	
-}
 
 
 
