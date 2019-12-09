@@ -7,7 +7,6 @@
 using namespace std; 
 
 int main() {
-	int input = 0;
 	int const MAX = 39; // maximum value of lottery number
 	int const MIN = 1; // minimum value of lottery number
 	int const LOTTERY_SIZE = 7; // # of lottery numbers
@@ -17,22 +16,19 @@ int main() {
 	DisplayMenu();
 
 	srand(time(0)); // refreshing seeds for random generation
-	while (input != 1) {
-		int* lotteryNumbers = generateArray(LOTTERY_SIZE, MIN, MAX);
-		int* bonusNumbers = generateArray(BONUS_SIZE, MIN, MAX);
-		sort(lotteryNumbers, lotteryNumbers + LOTTERY_SIZE);
-		sort(bonusNumbers, bonusNumbers + BONUS_SIZE);
-		int* combinedNumbers = combineArray(lotteryNumbers, bonusNumbers, LOTTERY_SIZE, BONUS_SIZE);
-		for (int i = 0; i < (LOTTERY_SIZE + BONUS_SIZE); i++) {
-			cout << combinedNumbers[i] << " ";
-		}
-		cout << "\nExit?" << endl; 
-		cin >> input; 
-	}
+	Start(MAX, MIN, LOTTERY_SIZE, BONUS_SIZE);
+	
+	
 	return EXIT_SUCCESS;
 }
 
 
+void DisplayNumbers(int* myArray, int size) {
+	for (int i = 0; i < size; i++)
+		cout << myArray[i] << " ";
+
+	cout << endl;
+}
 
 
 
