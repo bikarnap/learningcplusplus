@@ -12,23 +12,18 @@ int main() {
 	int const LOTTERY_SIZE = 7; // # of lottery numbers
 	int const BONUS_SIZE = 3; // # of bonus numbers
 
+	srand(time(0));
 	DisplayWelcome();
 	DisplayMenu();
-
-	srand(time(0)); // refreshing seeds for random generation
-	Start(MAX, MIN, LOTTERY_SIZE, BONUS_SIZE);
+	SelectOption(LOTTERY_SIZE, BONUS_SIZE, MIN, MAX);
+	//OpenLottery(LOTTERY_SIZE, BONUS_SIZE, MIN, MAX);
 	
 	
 	return EXIT_SUCCESS;
 }
 
 
-void DisplayNumbers(int* myArray, int size) {
-	for (int i = 0; i < size; i++)
-		cout << myArray[i] << " ";
 
-	cout << endl;
-}
 
 
 
