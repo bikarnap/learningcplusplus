@@ -1,12 +1,24 @@
-/**/
+/*
+// This file has functions related to array generation, array comparison, and array combination
+// 
+// GenerateArray function generates an array of given size within the defined minimum and maximum 
+// value of the elements
+//
+// CombineArray function combines two arrays
+//
+// CompareArray function compares two arrays of the same size in order to find if an element of one array
+// is present in the other array too.
+*/
+
 #include <iostream>
-#include "Header.h"
+#include "ArrayActions.h"
 using namespace std;
 
+// Function to generate array
 int* GenerateArray(int arraySize, int min, int max) {
 	int* generatedArray = new int[arraySize];
 	generatedArray[0] = rand() % max + min;
-	bool isDuplicate = false;
+	bool isDuplicate = false; // flag for checking if the random number generated is already present
 	int element;
 	for (int i = 0; i < arraySize; i++) {
 		element = rand() % max + min;
@@ -24,40 +36,36 @@ int* GenerateArray(int arraySize, int min, int max) {
 			//cout << element << " "; 
 		}
 	}
+
 	return generatedArray;
 }
 
-int* CombineArray(int* array1, int* array2, int size1, int size2) {
-	int array1Size = size1;
-	int array2Size = size2;
-	int* combinedArray;
-	combinedArray = new int[array1Size + array2Size];
-	cout << endl;
-	cout << "Combined numbers\n>> ";
-	for (int i = 0; i < (array1Size + array2Size); i++) {
-		if (i < array1Size)
-			combinedArray[i] = array1[i];
-		else 
-			combinedArray[i] = array2[i - array1Size];
-		//cout << combinedArray[i] << " ";
-	}
-	return combinedArray;
-}
-
-
-int* CompareArray(int* userArray, int* autoArray, int size) {
+// Function to compare two arrays of same size for duplicate values
+Results CompareArray(int* playerArray, int* autoArray, int size, int compareType) {
 	int* matchedNumbers= new int[size];
+	string matched; 
 	int count = 0 ;
+	if (compareType == 1)
+		matched = "main";
+	else
+		matched = "bonus";
+	cout << endl;
+	cout << ">> Matched " << matched <<" lottery numbers are: ";
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			if (autoArray[i] == userArray[j]) {
+			if (autoArray[i] == playerArray[j]) {
 				matchedNumbers[i] = autoArray[i];
 				cout << matchedNumbers[i] << " ";
 				count += 1;
 			}
 		}
 	}
-	cout << "Match count: " << count << "\n";
-	return matchedNumbers;
+	cout << "\n>> Matched " << matched  << " number count: " << count;
+	cout << endl;
+	Results results;
+	results.numbers = matchedNumbers;
+	results.number = count;
+
+	return results;
 }
 
